@@ -7,8 +7,15 @@
       <ul id="chat_content">
       </ul>
       <div class="chat_input">
+        <div class="placeholder">
+          <p>知识图谱可回答问题的格式：</p>
+          <p>xx-景点 xx-位置</p>
+          <p>xx-附近景点 xx-类似景点</p>
+          <p>xx-游记</p>
+          <p>推荐景点 推荐游记</p>
+        </div>
         <textarea @keydown.enter.prevent="chatsubmit" rows="6" v-model="chat_content" class="input_chat_text"></textarea>
-        <button  @click="chatsubmit" class="chat_text_submit">发送</button>
+        <button @click="chatsubmit" class="chat_text_submit">发送</button>
       </div>
     </div>
   </div>
@@ -83,7 +90,7 @@ export default {
         li1.appendChild(span1);
         ul.appendChild(li1)
         document.getElementById('chat_content').scrollTop = document.getElementById('chat_content').scrollHeight;
-      }, 200);   
+      }, 5000);
       this.axios.get('/api/qa',{
         params:{
           question:text
@@ -123,7 +130,7 @@ export default {
     overflow-x: hidden;
     height: calc(100vh - 70px);
     min-height: 600px;
-    background-color: rgb(29, 29, 29);
+    background-color: rgb(200, 200, 200);
     display: flex;
     justify-content: center;
   }

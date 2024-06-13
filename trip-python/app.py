@@ -90,6 +90,7 @@ def hello_world():
         links.append({'source': 1, 'target': 3, 'value': '位于', 'name': '位于', })
     res['nodes'] = nodes
     res['links'] = links
+    print(res['ans'])
     return jsonify(res)
 
 

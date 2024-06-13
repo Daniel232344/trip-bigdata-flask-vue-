@@ -1,7 +1,7 @@
 <template>
   <div id="Navigation">
     <div id="logo">
-      <img src="~assets/5u.png" alt="">
+      <img src="~assets/bupt.png" alt="">
     </div>
     <div id="Nav_modules">
       <div @click="jumpto('/')" :class="{active:this.$route.name == 'Home'}">首页</div>
@@ -11,20 +11,7 @@
       <div @click="jumpto('/creation')" :class="{active:this.$route.name == 'Creation'}">创作中心</div>
       <div @click="jumpto('/vip')" :class="{active:this.$route.name == 'Vip'}">会员中心</div>
     </div>
-    <div id="state">
-      <div id="navigation_search">
-        <input type="text">
-        <a href="#" class="navigation_search"><img src="~assets/img/HomePage/search.png" alt=""></a>
-      </div>
-      <a id="qq" href="#"><img src="~assets/img/HomePage/QQ.png" alt=""></a>
-      <a id="wx" href="#"><img src="~assets/img/HomePage/微信.png" alt=""></a>
-      <div class="log" v-if="$store.state.username == '' ">
-        <div id="log" @click="log">登陆</div>
-        <span> | </span>
-        <div id="register">注册</div> 
-      </div>
-      <div class="username" v-else>{{$store.state.username}}</div>
-    </div>
+
   </div>
 </template>
 <script>
@@ -43,8 +30,8 @@ export default {
   #Navigation {
     width: 100%;
     height: 70px;
-    background-color: rgb(10, 0, 0);
-    color: rgb(247, 247, 247);
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     display: flex;
     line-height: 80px;
     text-align: center;
@@ -69,12 +56,12 @@ export default {
     font-size: 15px;
   }
   .active {
-    background-color: rgb(247, 247, 247);
-    color:  rgb(10, 0, 0);
+    background-color: rgb(200, 200, 200);
+    color:  rgb(0, 0, 0);
   }
   #Nav_modules > div:hover {
-    background-color: rgb(247, 247, 247);
-    color:  rgb(10, 0, 0);
+    background-color: rgb(150, 150, 150);
+    color:  rgb(100, 0, 0);
     cursor: pointer;
   }
   #state {

@@ -5,7 +5,7 @@ from utils.dbutils import *
 from question_answer.获取天气情况 import *
 import re
 from utils.user_base import *
-
+from llm.llm import chat
 jieba.enable_paddle()
 
 
@@ -34,7 +34,7 @@ def get_loc_list(text):
 def question_classifier(text,uid='1'):
     # 如果flag一直为0的话就表示看不懂
     ans = '呜呜呜，我没看懂，换个问题试试'
-
+    print(type(ans))
     # 地区有什么景点
     if len(re.findall('.*?-景点',text))>0:
         print('地区有什么景点')
@@ -203,6 +203,10 @@ def question_classifier(text,uid='1'):
             index+=1
         return ans,nodes,links
 
+
+    ans = chat(text)
+    print(ans)
+    print(type(ans))
     # # 推荐vlog
     # if len(re.findall('.*?推荐一些视频|推荐视频|.*?推荐一些vlog|推荐vlog',text))>0:
     #     ans = '推荐vlog'

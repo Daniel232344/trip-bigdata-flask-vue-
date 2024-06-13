@@ -6,25 +6,16 @@
         <div><a>联系我们</a></div>
         <div><a>隐私政策商标声明</a></div>
         <div><a>服务协议</a></div>
-        <div><a>商城平台服务协议</a></div>
         <div><a>网络信息侵权通知指引</a></div>
-        <div><a>5u旅游网服务监督员</a></div>
-        <div><a>网站地图加入5u</a></div>
+        <div><a>旅游网服务监督员</a></div>
       </div>
-      <div class="server">
-        <div><a>旅行服务</a></div>
-        <div><a>旅游攻略</a><a>酒店预订</a></div>
-        <div><a>旅游特价</a><a>国际租车</a></div>
-        <div><a>旅游问答</a><a>旅游保险</a></div>
-        <div><a>旅游指南</a><a>订火车票</a></div>
-        <div><a>旅游咨询</a><a>APP下载</a></div>
-      </div>
+
     </div>
     <div class="wx">
       <img src="~assets/img/footer/wx1.jpg" alt="">
     </div>
     <div class="copyright">
-      Copyright © 2021by52feidianStudio All rights reserved.
+      Copyright © 2024byBupt2021211316_1201 All rights reserved.
     </div>
   </div>
 </template>
